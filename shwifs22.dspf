@@ -1,0 +1,53 @@
+     A*%%TS  SD  20240527  191105  WSSBKFIX2   REL-V7R5M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      REF(*LIBL/ITMMST)
+     A                                      CHGINPDFT(LC)
+     A                                      PRINT
+     A                                      INDARA
+     A                                      CA03(03 'F3=Exit')
+     A          R SFL02                     SFL
+     A*%%TS  SD  20240520  211013  WSSBKFIX2   REL-V7R5M0  5770-WDS
+     A            Z2RRN          4S 0H
+     A            Z2OPT          1A  B  8  3DSPATR(UL)
+     A            SCPATH02      30A  O  8  5
+     A            SCDESC02      30A  O  8 37
+     A            SCATTR02      10   O  8 69
+     A          R CTL02                     SFLCTL(SFL02)
+     A*%%TS  SD  20240527  191105  WSSBKFIX2   REL-V7R5M0  5770-WDS
+     A                                      SFLSIZ(9999)
+     A                                      SFLPAG(0014)
+     A                                      CA05(05 'F5=Refresh')
+     A                                      OVERLAY
+     A  31                                  SFLDSP
+     A  30                                  SFLDSPCTL
+     A N30                                  SFLDLT
+     A N30                                  SFLCLR
+     A  30                                  SFLEND(*MORE)
+     A                                  1  2USER
+     A                                      COLOR(BLU)
+     A                                  1 63TIME
+     A                                      COLOR(BLU)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(BLU)
+     A            Z2SCREEN      12A  O  2  2COLOR(BLU)
+     A                                  2 72SYSNAME
+     A                                      COLOR(BLU)
+     A                                  4  2'Position to:'
+     A                                      COLOR(BLU)
+     A            Z2POSITION    30A  B  4 15COLOR(BLU)
+     A                                  7  2'Opt Folder                        -
+     A                                       Description'
+     A                                      DSPATR(UL)
+     A                                      DSPATR(HI)
+     A            SCFLDR02      60A  O  3 15DSPATR(HI)
+     A            ATTRTIT       10A  O  7 69
+     A                                  3  2'File From:'
+     A                                      COLOR(BLU)
+     A                                  1 32'Show Files'
+     A          R REC02
+     A*%%TS  SD  20240513  181642  WSSBKFIX2   REL-V7R5M0  5770-WDS
+     A                                 23  4'F3=Exit  Opt-8 View File attr'
+     A                                      TEXT('COLOR')
+     A                                      COLOR(BLU)

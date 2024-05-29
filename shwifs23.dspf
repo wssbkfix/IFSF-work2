@@ -1,0 +1,53 @@
+     A*%%TS  SD  20240527  191341  WSSBKFIX2   REL-V7R5M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      REF(*LIBL/ITMMST)
+     A                                      CHGINPDFT(LC)
+     A                                      PRINT
+     A                                      INDARA
+     A                                      CA03(03 'F3=Exit')
+     A          R SFL03                     SFL
+     A*%%TS  SD  20240522  201404  WSSBKFIX2   REL-V7R5M0  5770-WDS
+     A            Z3RRN          4S 0H
+     A            SCDESC03      20A  O  8  3
+     A            SCATTR03      50A  O  8 25
+     A          R CTL03                     SFLCTL(SFL03)
+     A*%%TS  SD  20240527  191341  WSSBKFIX2   REL-V7R5M0  5770-WDS
+     A                                      SFLSIZ(0008)
+     A                                      SFLPAG(0008)
+     A                                      CA05(05 'F5=Refresh')
+     A                                      OVERLAY
+     A  31                                  SFLDSP
+     A  30                                  SFLDSPCTL
+     A N30                                  SFLDLT
+     A N30                                  SFLCLR
+     A  30                                  SFLEND(*MORE)
+     A                                  1  2USER
+     A                                      COLOR(BLU)
+     A                                  1 63TIME
+     A                                      COLOR(BLU)
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                      COLOR(BLU)
+     A            Z3SCREEN      12A  O  2  2COLOR(BLU)
+     A                                  2 72SYSNAME
+     A                                      COLOR(BLU)
+     A                                      DSPATR(UL)
+     A                                      DSPATR(HI)
+     A            SCFLDR03      60A  O  3 15
+     A                                  4  2'and file'
+     A                                      DSPATR(HI)
+     A                                      COLOR(BLU)
+     A            SCFLDR03B     60A  O  4 15
+     A                                  7  3'Attribute'
+     A                                      COLOR(WHT)
+     A                                  7 25'Attribute Value'
+     A                                      COLOR(WHT)
+     A                                  3  2'Path Name:'
+     A                                      COLOR(BLU)
+     A                                  1 35'File Attributes'
+     A          R REC03
+     A*%%TS  SD  20240513  181642  WSSBKFIX2   REL-V7R5M0  5770-WDS
+     A                                 23  4'F3=Exit    '
+     A                                      TEXT('COLOR')
+     A                                      COLOR(BLU)

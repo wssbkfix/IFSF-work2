@@ -60,6 +60,46 @@ SETSQLOMITLIST - sets the OMIT_LIST in all query statements. The wsOmitList glob
 SETSQLBASEFOLDER2 - sets the SET_PATH_NAME in cursor that reads files in a folder.       
 SETSQLFILTER2 - sets the WHERE clause in the READFILE cursor. The wsfilter2 global variable is set. This makes it availabe to all subprocedures. 
 SETSQLBASEFOLDER3 - sets the WHERE clause in the SELECT statement for listing the attributes of one file.      
+
+## RPG program SHWIFS2 
+This program manages to subfile interface, sets the filters correctly, and calls the SQL procecures in the correct order. 
+
+### moduls in the RPG program 
+
+Entry procedure 
+#### modules for Read folder screen 
+SETFILTER - sets the values that will populate the wsFilter in the SQL modules. 
+INIT - Calls subprocedures to set values        
+  SETDEFAULTVALUES - sets values that will populate START_PATH_NAME, OMIT_LIST   
+LOADSUBFILEDIR  
+READSUBFILE
+RESETCURSOR
+
+#### modles for Read files screen 
+PROCESSFILES - calls routines that populate the file list. 
+INIT2 
+  SETFILTER2
+LOADSUBFILEFILES                   
+READSUBFILE2                     
+RESETCURSOR2                       
+PROCESSFILE3   
+
+#### modules for list attribute for file screen 
+INIT3                               
+LOADSUBFILEFILESONE                          
+                             
+                   
+
+                     
+                     
+                       
+                     
+                     
+              
+SHWIFS2                          
+
+
+
          
           
           

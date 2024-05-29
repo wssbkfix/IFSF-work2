@@ -4,7 +4,8 @@ This is a second in a series of using table functions to view the IFS. The first
 
 ## The source data 
 The SQL function QSYS2.IFS_OBJECT_STATISTICS: 
-As might be expeced, the best way to get information about this is to go straight to the IBM docs. The syntax is a bit strange but not hard to master. 
+As might be expeced, the best way to get information about this is to go straight to the IBM docs. The syntax is a bit strange but not hard to master.
+	[link to QSYS2.IFS table Function]([https://www.example.com](https://www.ibm.com/docs/en/i/7.4?topic=services-ifs-object-statistics-table-function))
 ### Filtering component
 You probably don't want every IFS  object out there so you will need to filter it. This is done by the filter that is right after the from statement. There are 3 components of this filter 
 1- START_PATH_NAME =>   This is where you would put the path to start any searches.  Think of it as a CD command if you were using WRKLNK.
